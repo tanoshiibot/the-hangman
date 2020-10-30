@@ -2,7 +2,7 @@ window.onload = function() {
 
     let words = ["moka", "tiramisu", "panna cotta", "caramel", "capucinno", "crêpe", "latte machiatto", "mille-feuille", "101010aaaaa"]
     console.log(words);
-    words = words.filter(element => (element.length >= 5) && (![...element].includes(" ")));
+    words = words.filter(element => ((!/[ 0-9]/.test(element)) && (element.length > 4)));
     console.log(words);
     
     //HTML
