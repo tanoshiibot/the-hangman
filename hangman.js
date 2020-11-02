@@ -1,9 +1,7 @@
 window.onload = function() {
 
     let words = ["moka", "tiramisu", "panna cotta", "caramel", "capucinno", "crêpe", "latte machiatto", "mille-feuille", "101010aaaaa"]
-    console.log(words);
     words = words.filter(element => ((!/[ 0-9]/.test(element)) && (element.length > 4)));
-    console.log(words);
 
     let word = [];
     let spaces = [];
@@ -28,16 +26,12 @@ window.onload = function() {
         r = r.replace(new RegExp(/\W/g),"");
         return r;
     };
-    
-    //HTML
-    
-    document.getElementById("debug").innerText = `${lives} left before death !`;
+
     lives = 9;
     word = [...words[Math.floor(words.length * Math.random())]];
     word.forEach((x, i) => {
         word[i] = accentsTidy(x);
     })
-    console.log(word);
     spaces = [...word].map(x => x == "-" ? " - " : " _ ");
     missChara = word.length;
     spaces.forEach((x) => {
@@ -49,6 +43,10 @@ window.onload = function() {
             missChara--;
         } 
     })
+    
+    //HTML
+    
+    document.getElementById("debug").innerText = `${lives} left before death !`;
 
     document.addEventListener("keydown", event => {
         if ((lives > 0) && (missChara > 0)) {
