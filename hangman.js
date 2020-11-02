@@ -1,6 +1,6 @@
 window.onload = function() {
 
-    let words = ["moka", "tiramisu", "panna cotta", "caramel", "capucinno", "crêpe", "latte machiatto", "mille-feuille", "101010aaaaa"]
+    let words = ["moka", "tiramisu", "panna cotta", "caramel", "capucinno", "crêpe", "latte machiatto", "mille-feuille", "merveilleux", "cupcake", "chocolat", "cheesecake", "meringue", "gâteau", "cookie", "madelaine", "sablé", "palmier", "brownie", "vanille", "crème", "spéculoos", "flan", "pudding", "donut", "beignet", "sucre", "café", "stretto", "lungo", "doppio", "expresso", "crème brûlée", "moelleux", "cannolis", "matcha", "sencha", "genmaicha", "gyokuro"]
     words = words.filter(element => ((!/[ 0-9]/.test(element)) && (element.length > 4)));
 
     let word = [];
