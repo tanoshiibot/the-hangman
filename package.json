@@ -1,0 +1,23 @@
+{
+  "name": "the-hangman",
+  "version": "1.0.0",
+  "description": "Exercice BeCode : réaliser un pendu en js",
+  "main": "main.js",
+  "dependencies": {
+    "discord.js": "^12.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanoshiibot/the-hangman.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tanoshiibot/the-hangman/issues"
+  },
+  "homepage": "https://github.com/tanoshiibot/the-hangman#readme"
+}

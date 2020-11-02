@@ -1,4 +1,3 @@
-function generateHangman(emoji) {
 
     let words = ["moka", "tiramisu", "panna cotta", "caramel", "capucinno", "crêpe", "latte machiatto", "mille-feuille", "merveilleux", "cupcake", "chocolat", "cheesecake", "meringue", "gâteau", "cookie", "madelaine", "sablé", "palmier", "brownie", "vanille", "crème", "spéculoos", "flan", "pudding", "donut", "beignet", "sucre", "café", "stretto", "lungo", "doppio", "expresso", "crème brûlée", "moelleux", "cannolis", "matcha", "sencha", "genmaicha", "gyokuro"]
     words = words.filter(element => ((!/[ 0-9]/.test(element)) && (element.length > 4)));
@@ -12,6 +11,7 @@ function generateHangman(emoji) {
 
     function accentsTidy(s) {
         let r = s.toLowerCase();
+        r = r.replace(new RegExp(/\s/g),"");
         r = r.replace(new RegExp(/[àáâãäå]/g),"a");
         r = r.replace(new RegExp(/æ/g),"ae");
         r = r.replace(new RegExp(/ç/g),"c");
@@ -22,6 +22,7 @@ function generateHangman(emoji) {
         r = r.replace(new RegExp(/œ/g),"oe");
         r = r.replace(new RegExp(/[ùúûü]/g),"u");
         r = r.replace(new RegExp(/[ýÿ]/g),"y");
+        r = r.replace(new RegExp(/\W/g),"");
         return r;
     };
 
@@ -42,11 +43,11 @@ function generateHangman(emoji) {
         } 
     })
     
-
+    
 
 
     //HTML
-    /*
+
     document.getElementById("debug").innerText = `${lives} left before death !`;
 
     document.addEventListener("keydown", event => {
@@ -79,5 +80,4 @@ function generateHangman(emoji) {
             document.getElementById("output").innerText = "your ded :(";
         }
     })
-    */
-}
+    
