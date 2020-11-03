@@ -1,11 +1,10 @@
-function generateHangman(emoji) {
+module.exports = function generateHangman() {
 
     let words = ["moka", "tiramisu", "panna cotta", "caramel", "capucinno", "crêpe", "latte machiatto", "mille-feuille", "merveilleux", "cupcake", "chocolat", "cheesecake", "meringue", "gâteau", "cookie", "madelaine", "sablé", "palmier", "brownie", "vanille", "crème", "spéculoos", "flan", "pudding", "donut", "beignet", "sucre", "café", "stretto", "lungo", "doppio", "expresso", "crème brûlée", "moelleux", "cannolis", "matcha", "sencha", "genmaicha", "gyokuro"]
     words = words.filter(element => ((!/[ 0-9]/.test(element)) && (element.length > 4)));
 
     let word = [];
     let spaces = [];
-    let keysPressed = [];
     let lives = 9;
     let missChara = 0;
 
@@ -30,20 +29,16 @@ function generateHangman(emoji) {
     word.forEach((x, i) => {
         word[i] = accentsTidy(x);
     })
-    spaces = [...word].map(x => x == "-" ? " - " : " _ ");
+    spaces = [...word].map(x => x == "-" ? " - " : " ? ");
     missChara = word.length;
     spaces.forEach((x) => {
-        let a = document.createElement("LI");
-        a.innerText = x;
-        a.setAttribute("class", "character");
-        document.getElementById("word").appendChild(a);
         if (x == " - ") {
             missChara--;
         } 
     })
-    
 
-
+    let hangman = [word, spaces, missChara];
+    return hangman;
 
     //HTML
     /*
