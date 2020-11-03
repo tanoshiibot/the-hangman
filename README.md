@@ -11,14 +11,18 @@ Vous pouvez jouer à la version HTML du jeu [ici](https://tanoshiibot.github.io/
 
 ### Jouer au pendu sur Discord :
 
-* Pour démarrer le pendu, écrivez `>pendu start`. Le bot va générer un pendu. Utilisez également cette commande pour redémarrer une partie. 
+* Pour démarrer le pendu, écrivez `>pendu start`. Le bot va générer un pendu. Utilisez également cette commande pour redémarrer une partie.
+
 ![Screenshot: >pendu start](https://raw.githubusercontent.com/tanoshiibot/the-hangman/main/screenshots/start.PNG)
 
 * Écrivez ensuite `>pendu [votre proposition de lettre]` pour proposer une lettre. Le dessin du pendu va se continuer si le mot ne contient pas la lettre, et placera la lettre dans les cases correspondantes si elle s'y trouve.
+
 ![Screenshot: >pendu [proposition de lettre]](https://github.com/tanoshiibot/the-hangman/blob/main/screenshots/pendu.PNG)
+
 *(Si vous écrivez un nombre, une suite de lettre ou un caractère spécial, vous gâchez une vie. Les mots sont normalisés et ne contiennent pas d'accent ou d'espace.)*
 
 * La partie se termine si le dessin du pendu se complète (perdu) ou si vous avez trouvé toutes les lettres (gagné). Vous devez refaire `>pendu start` pour relancer une partie.
+
 ![Screenshot: gagné](https://github.com/tanoshiibot/the-hangman/blob/main/screenshots/perdu.PNG)
 ![Screenshot: perdu](https://github.com/tanoshiibot/the-hangman/blob/main/screenshots/won.PNG)
 
