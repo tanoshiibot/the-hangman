@@ -8,7 +8,6 @@ module.exports = function generateHangman() {
     let lives = 9;
     let missChara = 0;
 
-
     function accentsTidy(s) {
         let r = s.toLowerCase();
         r = r.replace(new RegExp(/[àáâãäå]/g),"a");
@@ -39,40 +38,4 @@ module.exports = function generateHangman() {
 
     let hangman = [word, spaces, missChara];
     return hangman;
-
-    //HTML
-    /*
-    document.getElementById("debug").innerText = `${lives} left before death !`;
-
-    document.addEventListener("keydown", event => {
-        if ((lives > 0) && (missChara > 0)) {
-            if ((event.keyCode >= 65) && (event.keyCode <= 90)) {
-                document.getElementById("output").innerText = event.key;
-                if (keysPressed.includes(event.key)){
-                    document.getElementById("output2").innerText = "déjà dedans !!!";
-                } else {
-                    keysPressed.push(event.key);
-                    if (word.includes(event.key)) {
-                        word.forEach((x, i) => {
-                            if (x == event.key) {
-                                document.getElementsByClassName("character")[i].innerText = ` ${event.key} `;
-                                missChara--;
-                                document.getElementById("output2").innerText = missChara;
-                                if (missChara == 0) {
-                                    document.getElementById("output").innerText = "your won :)";
-                                } 
-                            }
-                        })
-                    } else {
-                        lives--;
-                        document.getElementById("hangman").setAttribute("src", `./img/${-lives + 9}.png`);
-                    }
-                }
-            }
-            document.getElementById("debug").innerText = `${lives} left before death !`
-        } else if (lives == 0) {
-            document.getElementById("output").innerText = "your ded :(";
-        }
-    })
-    */
 }

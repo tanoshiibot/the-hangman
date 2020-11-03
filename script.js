@@ -42,14 +42,9 @@
             missChara--;
         } 
     })
-    
-    
-
-
-    //HTML
 
     document.getElementById("debug").innerText = `${lives} left before death !`;
-
+    
     document.addEventListener("keydown", event => {
         if ((lives > 0) && (missChara > 0)) {
             if ((event.keyCode >= 65) && (event.keyCode <= 90)) {
