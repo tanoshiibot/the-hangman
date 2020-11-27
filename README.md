@@ -1,4 +1,4 @@
-# the-hangman
+# The Hangman
 Exercice BeCode : réalisation d'un pendu en js.
 *Olivia Fantinel* 
 
