@@ -35,6 +35,8 @@ J'ai essayé de mettre la liste de mots sur mon serveur et de la récupérer dep
 
 ## Améliorations possibles
 
-Le pendu est "prêt" à recevoir et trier une liste de mots bien plus complète que la lsite actuelle. Cependant, il faut que j'apprenne à accder à cette liste de mot autrement qu'en local ou sur la RAM, car cette liste est gigantesque. 
+* Le pendu est "prêt" à recevoir et trier une liste de mots bien plus complète que la lsite actuelle. Cependant, il faut que j'apprenne à accder à cette liste de mot autrement qu'en local ou sur la RAM, car cette liste est gigantesque. 
 
-J'aurais également aimé qu'on puisse choisir l'émoji pendu, mais ce n'était pas ma priorité. Je le rajouterai peut-être car c'est assez simple à rajouter.
+* J'aurais également aimé qu'on puisse choisir l'émoji pendu, mais ce n'était pas ma priorité. Je le rajouterai peut-être car c'est assez simple à rajouter.
+
+* Je devrais afficher le mot lorsque la partie est perdue.
